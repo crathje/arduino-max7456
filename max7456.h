@@ -58,7 +58,7 @@ public:
 	/**
 	 *  Initialize communications and device
 	 *  @param pinCS : pin ~CS of the arduino where max7456 is plugged.
-	 *  @param videoMode : 1 for PAL, 0 for NTSC
+	 *  @param videoMode : 1 for PAL, 0 for NTSC // In NTSC mode, 13 rows x 30 characters are displayed. In PAL mode, 16 rows x 30 characters are displayed.
 	 *  @code
 	 *  Max7456 osd;
 	 *  osd.init(9); //Note it's that it's the same than usinge constructor Max7456(byte pinCS).

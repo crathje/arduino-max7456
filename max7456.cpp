@@ -400,7 +400,7 @@ void Max7456::init(byte iPinCS, byte videoMode = 1)
 	SPI.transfer(VM0_ADDRESS_WRITE);
 
 	_regVm0.whole = 0x00;
-	_regVm0.bits.videoSelect = 1; // PAL
+	_regVm0.bits.videoSelect = videoMode; // PAL = 1
 	_regVm0.bits.softwareResetBit = 1;
 	SPI.transfer(_regVm0.whole);
 	digitalWrite(_pinCS, HIGH);
