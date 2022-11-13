@@ -14,7 +14,10 @@
 //i.e address 0x00 -> ' '
 //....
 //    address 0x5A -> 'z'
-#define MAX7456_TABLE_ASCII
+#define MAX7456_TABLE_ASCII 0
+
+// def this for table similar to the default from http://www.mylifesucks.de/tools/max7456/
+#define MAX7456_TABLE_COSD 1
 
 #include "max7456registers.h"
 
