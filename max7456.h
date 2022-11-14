@@ -93,8 +93,9 @@ public:
 	 *  @param act :
 	 *  @li if true OSD is activated
 	 *  @li if false OSD is deactivated
+	 *  @param videoMode : 1 for PAL, 0 for NTSC // In NTSC mode, 13 rows x 30 characters are displayed. In PAL mode, 16 rows x 30 characters are displayed.
 	 */
-	void activateOSD(bool act = true);
+	void activateOSD(bool act = true, byte videoMode = 1);
 
 
 	/**
@@ -205,7 +206,7 @@ public:
 	 *  @return 13 for NTSC, 16 for PAL
 	 */
 	byte getLineCount();
-	
+
 	/**
 	 *  Print a character to Serial port
 	 *  @param array : the byte array representing the character (54 bytes long)

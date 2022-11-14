@@ -452,12 +452,12 @@ void Max7456::init(byte iPinCS, byte videoMode = 1)
 //-----------------------------------------------------------------------------
 // Implements Max7456::activateOSD
 //-----------------------------------------------------------------------------
-void Max7456::activateOSD(bool act)
+void Max7456::activateOSD(bool act, byte videoMode = 1)
 {
 	if (_isActivatedOsd != act)
 	{
 
-		_regVm0.bits.videoSelect = 1;
+		_regVm0.bits.videoSelect = videoMode;
 		if (act)
 			_regVm0.bits.enableOSD = 1;
 		else
