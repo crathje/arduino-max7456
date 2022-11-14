@@ -195,6 +195,18 @@ public:
 	void printMax7456Char(const byte address, byte x, byte y, byte blink=0, byte inv=0);
 
 	/**
+	 *  Get the current Video Mode
+	 *  @return 0 for NTSC, 1 for PAL
+	 */
+	byte getVideoMode();
+
+	/**
+	 *  Get the maximum line count (character lines)
+	 *  @return 13 for NTSC, 16 for PAL
+	 */
+	byte getLineCount();
+	
+	/**
 	 *  Print a character to Serial port
 	 *  @param array : the byte array representing the character (54 bytes long)
 	 *  @param img :
