@@ -403,7 +403,7 @@ void Max7456::clearScreen()
 //-----------------------------------------------------------------------------
 // Implements Max7456::init
 //-----------------------------------------------------------------------------
-void Max7456::init(byte iPinCS, byte videoMode = 1)
+void Max7456::init(byte iPinCS, byte videoMode)
 {
 	_pinCS = iPinCS;
 	_isActivatedOsd = false;
@@ -452,7 +452,7 @@ void Max7456::init(byte iPinCS, byte videoMode = 1)
 //-----------------------------------------------------------------------------
 // Implements Max7456::activateOSD
 //-----------------------------------------------------------------------------
-void Max7456::activateOSD(bool act, byte videoMode = 1)
+void Max7456::activateOSD(bool act, byte videoMode)
 {
 	if (_isActivatedOsd != act)
 	{
