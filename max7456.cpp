@@ -284,6 +284,20 @@ void Max7456::printMax7456Chars(byte chars[], byte size, byte x, byte y, byte bl
 		SPI.transfer(0x4c);*/
 
 	digitalWrite(_pinCS, HIGH);
+	
+
+
+	if (debugPrintCallback != NULL)
+	{
+		uint8_t debugBuff[size + 2];
+		debugBuff[0] = x;
+		debugBuff[1] = y;
+		for (int i = 0; i < size; i++)
+		{
+			debugBuff[i + 2] = chars[i];
+		}
+		this->debugPrintCallback(debugBuff, sizeof(debugBuff));
+	}
 }
 
 //-----------------------------------------------------------------------------
