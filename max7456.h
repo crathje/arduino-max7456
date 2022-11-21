@@ -243,6 +243,9 @@ public:
 	 * @note See file example for more informations.
 	 */
 	static void getCARACFromProgMem(const char *table, byte i,charact c);
+	
+	
+  	void (*debugPrintCallback)(uint8_t* data, size_t len);
 
 private:
 
