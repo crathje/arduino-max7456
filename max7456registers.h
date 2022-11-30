@@ -639,6 +639,13 @@ union CARACT
 	union LINE line[18];
 };
 
+/**
+Blinking Duty Cycle (On : Off)
+00 = BT : BT
+01 = BT : (2 x BT)
+10 = BT : (3 x BT)
+11 = (3 x BT) : BT
+*/
 enum
 {
 	_BT_BT = 0,
@@ -647,6 +654,14 @@ enum
 	_3BT_BT
 };
 
+
+/**
+Blinking Time (BT)
+00 = 2 fields (33ms in NTSC mode, 40ms in PAL mode)
+01 = 4 fields (67ms in NTSC mode, 80ms in PAL mode)
+10 = 6 fields (100ms in NTSC mode, 120ms in PAL mode)
+11 = 8 fields (133ms in NTSC mode, 160ms in PAL mode)
+*/
 enum
 {
 	_2fields = 0,
